@@ -5,7 +5,7 @@ namespace Faster_Teleportation
 {
     
 
-    [BepInPlugin("com.lvh-it.valheim.fasterteleportation", "Faster Teleportation", "0.1.0.0")]
+    [BepInPlugin("com.lvh-it.valheim.fasterteleportation", "Faster Teleportation", "0.2.0.0")]
     [BepInProcess("valheim.exe")]
     public class FasterTeleportation : BaseUnityPlugin
     {
@@ -19,14 +19,7 @@ namespace Faster_Teleportation
         [HarmonyPrefix]
         static void patchTeleportTimer(ref float dt)
         {
-            dt = 20f;
-        }
-
-        [HarmonyPatch(typeof(Player), "TeleportTo")]
-        [HarmonyPrefix]
-        static void makeTeleportNonDistant(ref bool distantTeleport)
-        {
-            distantTeleport = false;
+            dt *= 3;
         }
     }
 }
