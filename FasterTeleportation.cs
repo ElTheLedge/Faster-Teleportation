@@ -6,7 +6,7 @@ namespace Faster_Teleportation
 {
     
 
-    [BepInPlugin("com.lvh-it.valheim.fasterteleportation", "Faster Teleportation", "0.2.0.0")]
+    [BepInPlugin("com.lvh-it.valheim.fasterteleportation", "Faster Teleportation", "0.3.0.0")]
     [BepInProcess("valheim.exe")]
     public class FasterTeleportation : BaseUnityPlugin
     {
